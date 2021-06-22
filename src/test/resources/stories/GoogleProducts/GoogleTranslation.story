@@ -5,9 +5,9 @@ As a google user
 I want to use google translator
 So that I can get to see the translated strings
 
+Meta:
 @translate
-Scenario: scenario description
+Scenario: Verifying translated strings in google translator
 Given I navigate to google translate
-When I search for a string
-Then the detectedLanguage should be correct
-And the translatedString should be correct
+When I provide a input string
+Then the detected language and translated string should be correct
