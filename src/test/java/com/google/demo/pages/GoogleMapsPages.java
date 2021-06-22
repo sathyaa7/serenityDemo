@@ -43,19 +43,20 @@ public class GoogleMapsPages extends GooglePage {
     }
 
     public void searchForTerm(String searchTerm) {
-        searchField.sendKeys(searchTerm);
-        getDriver().findElement(By.xpath("//span[text()=\"London, UK\"]")).click();
+        searchField.typeAndEnter(searchTerm);
     }
 
     public boolean verifyDetails(String searchTerm) {
         boolean correctDetails = false;
+        scrollDown(200);
+        WebElement contactNumber = explicitlyWait(phoneNumber);
         //Hardcoded values can be replaced if we fetch the values from Google maps api
         switch (searchTerm) {
             case "London eye":
-                scrollDown(100);
-                System.out.println("After scrolllll");
-                WebElement contactNumber = explicitlyWait(phoneNumber);
                 correctDetails = contactNumber.getText().replaceAll(" ", "").equals("+442079678021");
+                break;
+            case "Statue of Liberty":
+                correctDetails = contactNumber.getText().equals("+12123633200");
                 break;
             default:
                 System.out.println("Location not available for checking");
@@ -69,12 +70,11 @@ public class GoogleMapsPages extends GooglePage {
 
         switch (amenity) {
             case "RESTAURANTS":
-                WebElement restaurantsSearch = explicitlyWait(restaurants);
-                restaurantsSearch.click();
+                explicitlyWait(restaurants).click();
                 restaurantRating.click();
                 break;
             case "HOTELS":
-                hotels.click();
+                explicitlyWait(hotels).click();
                 guestRating.click();
                 break;
         }

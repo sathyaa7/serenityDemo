@@ -16,21 +16,15 @@ public class GoogleTranslatorSteps {
         googleTranslatorTests.navigateToGoogleTranslator();
     }
 
-    @When("I provide a input String")
+    @When("I provide a input string")
     public void searchForString()
     {
         googleTranslatorTests.searchForString();
     }
 
-    @Then("the detectedLanguage should be correct")
+    @Then("the detected language and translated string should be correct")
     public void verifyDetectedLanguage()
     {
-        googleTranslatorTests.verifyDetectedLanguage();
-    }
-
-    @Then("the translatedString should be correct")
-    public void verifyTranslatedString()
-    {
-        googleTranslatorTests.verifyTranslatedString();
+        googleTranslatorTests.verifyTranslation();
     }
 }
