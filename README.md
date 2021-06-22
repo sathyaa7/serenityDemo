@@ -1,4 +1,5 @@
 Serenity Jbehave BDD framework demo project
+
 Implemented demo API test via rest assured
 
 Command to run all test cases : mvn clean verify
