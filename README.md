@@ -1,4 +1,4 @@
-Serenity Jbehave BDD framework demo project
+Serenity Jbehave BDD framework project
 
 Implemented demo API test via rest assured
 
