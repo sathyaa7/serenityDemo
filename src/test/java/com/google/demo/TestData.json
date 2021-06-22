@@ -1,16 +1,18 @@
-{
-  "Test1":
+[
   {
-    "Input":"Je m'appelle Paul",
-    "Output":"My name is Paul",
-    "DetectedLanguage":"French",
-    "OutputLanguage":"English"
+    "Test": {
+      "Input": "Je m'appelle Paul",
+      "Output": "My name is Paul",
+      "DetectedLanguage": "FRENCH",
+      "OutputLanguage": "ENGLISH"
+    }
   },
-  "Test2":
   {
-    "Input":"I am a student",
-    "Output":"Je suis un etudiant",
-    "DetectedLanguage":"English",
-    "OutputLanguage":"French"
+    "Test": {
+      "Input": "I like france",
+      "Output": "J'aime la france",
+      "DetectedLanguage": "ENGLISH",
+      "OutputLanguage": "FRENCH"
+    }
   }
-}
+]
